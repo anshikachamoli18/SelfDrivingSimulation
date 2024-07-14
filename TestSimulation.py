@@ -1,12 +1,13 @@
 import socketio
 import eventlet
 import numpy as np
-import tensorflow.keras.models
+from tensorflow import keras
 from flask import Flask
 import base64
 from io import BytesIO
 from PIL import Image
 import cv2
+import tensorflow
 
 sio = socketio.Server()
 

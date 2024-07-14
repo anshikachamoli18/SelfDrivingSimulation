@@ -29,8 +29,7 @@ model = createModel()
 model.summary()
 
 #### STEP 9 Fitting Model
-history = model.fit(batchGenerator(xTrain, yTrain, 10, 1), steps_per_epoch=20, epochs=2, 
-                    validation_data=batchGenerator(xVal, yVal, 10, 0), validation_steps=20)
+history = model.fit(batchGenerator(xTrain, yTrain, 100, 1), steps_per_epoch=300, epochs=10, validation_data=batchGenerator(xVal, yVal, 100, 0), validation_steps=200)
 
 #### STEP 10
 model.save('model.h5')
@@ -39,6 +38,7 @@ print("Model saved")
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.legend(['Training', 'Validation'])
+plt.ylim([0, 1])
 plt.title('Loss')
 plt.xlabel('Epoch')
 plt.show()

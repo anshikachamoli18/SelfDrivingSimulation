@@ -6,9 +6,10 @@ import random
 import matplotlib.image as mpimg
 from imgaug import augmenters as iaa
 import cv2
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D,Flatten,Dense
-from tensorflow.keras.optimizers import Adam
+from tensorflow import keras
+from keras.models import Sequential
+from keras.layers import Conv2D,Flatten,Dense
+from keras.optimizers import Adam
 
 
 def getName(filePath):
